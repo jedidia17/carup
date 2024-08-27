@@ -1,17 +1,26 @@
 import { createRoot } from 'react-dom/client';
-import { Button } from './components/ui/button';
+import LoginForm from './screens/Login';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RegisterForm from './screens/Register';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import './globals.css';
 
-function App () {
-  return (
-    <div className='p-2'>
-      <h1>Hello world</h1>
-      <Button size="lg">LOGIN</Button>
-    </div>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <LoginForm />
+  },
+  {
+    path: '/register',
+    element: <RegisterForm />
+  }
+]);
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-    <App />
-)
+  <>
+    <RouterProvider router={router} />
+    <ToastContainer />
+  </>
+);
