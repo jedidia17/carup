@@ -1,10 +1,11 @@
 export default function Home() {
   return (
-    <div className={'accueil dark-modeaccueil light-mode'}>
-
-      <h1 className="text-[#1f78d1] text-4xl mb-5">Bienvenue à CarUp</h1>
-      <p className="text-[#1f78d1] text-lg mb-5">Gardez votre véhicule en parfait état avec CarUp.</p>
-      <p className="text-[#1f78d1] text-lg mb-5">Votre application de rappel d’entretien automobile au sommet !</p>
+    <div className="w-[100%]">
+      <div className="py-12 text-center">
+        <h1 className="text-[#1f78d1] text-4xl mb-5">Bienvenue à CarUp</h1>
+        <p className="text-[#1f78d1] text-lg mb-5">Gardez votre véhicule en parfait état avec CarUp.</p>
+        <p className="text-[#1f78d1] text-lg mb-5">Votre application de rappel d’entretien automobile au sommet !</p>
+      </div>
 
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         <img src="/lilkabaki001.jpg" alt="lilkabaki001" className="w-48 h-48 m-5 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110" />

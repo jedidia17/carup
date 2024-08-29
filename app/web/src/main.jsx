@@ -7,6 +7,7 @@ import Home from './screens/Home';
 import Layout from './components/layouts/Layout';
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
+import Contact from './screens/Contact';
 
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       }
     ]
   },
