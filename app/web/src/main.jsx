@@ -8,6 +8,7 @@ import Layout from './components/layouts/Layout';
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from './screens/Contact';
+import Functionality from './screens/functionality';
 
 
 const router = createBrowserRouter([
@@ -22,16 +23,12 @@ const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />
+      },
+      {
+        path: '/functionality',
+        element: <Functionality />
       }
     ]
-  },
-  {
-    path: '/login',
-    element: <LoginForm />
-  },
-  {
-    path: '/register',
-    element: <RegisterForm />
   }
 ]);
 

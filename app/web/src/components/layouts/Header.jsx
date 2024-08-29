@@ -5,6 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/login');
+  }
   return (
     <header>
       <nav className="bg-background p-4 sticky top-0">
@@ -16,11 +19,11 @@ export default function Header() {
 
           {/* Menu items */}
           <div className="hidden md:flex space-x-6">
-            <Link to="/about" className="hover:text-gray-700">
-              About
+            <Link to="/" className="hover:text-gray-700">
+              Acceuil
             </Link>
-            <Link to="/services" className="hover:text-gray-700">
-              Services
+            <Link to="/functionality" className="hover:text-gray-700">
+              Fonctionnalites
             </Link>
             <Link to="/contact" className="hover:text-gray-700">
               Contact
@@ -29,7 +32,7 @@ export default function Header() {
 
           {/* Get Started Button */}
           <div className="hidden md:block">
-            <Button onClick={navigate('/login')}>
+            <Button onClick={handleClick}>
               Get Started
             </Button>
           </div>
