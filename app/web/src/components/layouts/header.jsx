@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Link, useNavigate } from "react-router-dom";
-
+import Logo from "./logo";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -9,12 +9,14 @@ export default function Header() {
     navigate('/login');
   }
   return (
-    <header>
+    <header className="sticky top-0">
       <nav className="bg-background p-4 sticky top-0">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="text-xl font-bold">
-            <Link to="/">Logo</Link>
+            <Link to="/">
+              <Logo />
+            </Link>
           </div>
 
           {/* Menu items */}
@@ -33,7 +35,7 @@ export default function Header() {
           {/* Get Started Button */}
           <div className="hidden md:block">
             <Button onClick={handleClick}>
-              Get Started
+              Commencer
             </Button>
           </div>
 

@@ -2,14 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function TestimonialCard({ name, email, text, image }) {
     return (
-        <motion.div
-            initial={{ scale: 0 }}
-            animate={{ rotate: 360, scale: 1 }}
-            transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 20
-            }}
+        <div
             class="font-[sans-serif] max-w-[410px] h-auto p-6 rounded-lg mx-auto shadow-[0_6px_18px_-6px_rgba(193,195,248)] bg-white relative mt-12 hover:scale-125">
             <img src={image} class="w-16 h-16 rounded-full absolute right-0 left-0 mx-auto -top-7" />
             <div class="mt-6 text-center">
@@ -49,6 +42,6 @@ export default function TestimonialCard({ name, email, text, image }) {
                     </svg>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
