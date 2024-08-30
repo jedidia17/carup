@@ -6,7 +6,7 @@ import Logo from "./logo";
 export default function Header() {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/login');
+    navigate('/auth/login');
   }
   return (
     <header className="sticky top-0 z-50">
@@ -61,7 +61,7 @@ export default function Header() {
           <Link to="/contact" className="block text-gray-700">
             Contact
           </Link>
-          <Button onClick={navigate('/login')} className="w-full mt-2">
+          <Button onClick={() => navigate('/auth/login')} className="w-full mt-2">
             Get Started
           </Button>
         </div>

@@ -13,7 +13,7 @@ export default function Footer() {
               <Link to="/" className="hover:underline">Acceuil</Link>
             </li>
             <li>
-              <Link to="/" className="hover:underline">Fonctionnalites</Link>
+              <Link to="/functionality" className="hover:underline">Fonctionnalites</Link>
             </li>
             <li>
               <Link to="/contact" className="hover:underline">Contact</Link>
