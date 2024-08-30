@@ -22,7 +22,6 @@ export default function RegisterForm() {
 
   const onSubmit = async (data) => {
     const { name, email, password } = data;
-    console.log(name, email, password);
     try {
       const resp = await axios.post(`${appConfig.BACKEND_URL}/api/v1/users/`, {
         name: name,
@@ -30,7 +29,6 @@ export default function RegisterForm() {
         password: password
       });
       const responseData = await resp.data;
-      // console.log(responseData);
       localStorage.clear();
       sessionStorage.clear();
       localStorage.setItem('token', responseData.token);
@@ -40,10 +38,8 @@ export default function RegisterForm() {
       navigate("/dashboard");
     } catch (error) {
       toast.error('An error occurred during registration.');
-      // console.error("Error during registration:", error);
     }
   };
-
   return (
     <div className="flex items-center justify-center h-screen">
       <Card className="mx-auto max-w-sm">

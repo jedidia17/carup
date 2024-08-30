@@ -7,7 +7,6 @@ dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 export default class UserController {
     static async create(req, res) {
-        console.log(req.body);
         const { name, email, password } = req.body;
         if (!name || !email || !password) {
             res.status(400).json({ error: 'Name, email, and password are required' });
@@ -19,7 +18,6 @@ export default class UserController {
                 data: { name, email, password: hashedPassword },
             });
             const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: '2099h' });
-            console.log(token);
             res.status(201).json({
                 message: 'User registered successfully',
                 token: token,
