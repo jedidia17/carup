@@ -1,13 +1,13 @@
 import { createRoot } from 'react-dom/client';
-import LoginForm from './screens/Login';
+import LoginForm from './screens/login';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import RegisterForm from './screens/Register';
+import RegisterForm from './screens/register';
 import { ToastContainer } from 'react-toastify';
-import Home from './screens/Home';
+import Home from './screens/home';
 import Layout from './components/layouts/layout';
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
-import Contact from './screens/Contact';
+import Contact from './screens/contact';
 import Functionality from './screens/functionality';
 
 

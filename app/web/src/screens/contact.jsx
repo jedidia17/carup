@@ -1,8 +1,13 @@
+import ContactBanner from "@/components/shared/contactBanner";
+
+
+
 export default function Contact() {
     return (
         <>
+            <ContactBanner />
 
-            <div className="contact-container">
+            {/* <div className="contact-container">
                 <div className="contact-content">
                     <h2>CONTACTEZ-NOUS</h2>
                     <h1>Gardez votre véhicule en parfait état</h1>
@@ -37,14 +42,14 @@ export default function Contact() {
                     <img src="/equipes.jpg" alt="equipes.jpg" />
                     <div className="image-credit"></div>
                 </div>
-            </div>
+            </div> */}
 
 
-            <div class="mt-6">
+            <div class="my-12">
             <div class="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
                 <div>
-                    <h1 class="text-gray-800 text-3xl font-extrabold">Let's Talk</h1>
-                    <p class="text-sm text-gray-500 mt-4">Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project  and provide help.</p>
+                    <h1 class="text-gray-800 text-3xl font-extrabold">Contactez CarUp</h1>
+                    <p class="text-sm text-gray-500 mt-4">Notre équipe est prête à répondre à toutes vos questions et à vous aider à maintenir votre voiture en parfait état.</p>
 
                     <div class="mt-12">
                         <h2 class="text-gray-800 text-base font-bold">Email</h2>
@@ -60,7 +65,7 @@ export default function Contact() {
                                 </div>
                                 <a href="javascript:void(0)" class="text-[#007bff] text-sm ml-4">
                                     <small class="block">Mail</small>
-                                    <strong>info@example.com</strong>
+                                    <strong>jedidia17@gmail.com</strong>
                                 </a>
                             </li>
                         </ul>

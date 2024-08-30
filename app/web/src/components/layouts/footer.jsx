@@ -5,38 +5,23 @@ export default function Footer() {
   return (
     <footer className="bg-background">
       <Separator />
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Column 1: Logo and Description */}
-        <div>
-          <h2 className="text-xl font-bold">Logo</h2>
-          <p className="mt-2 text-gray-400">
-            Creating impactful digital solutions to solve local and global problems.
-          </p>
-        </div>
-
-        {/* Column 2: Navigation Links */}
-        <div>
-          <h2 className="text-lg font-semibold">Navigation</h2>
-          <ul className="mt-4 space-y-2">
+      <div className="container py-10">
+        <div className='flex items-center justify-between'>
+          {/* Column 2: Navigation Links */}
+          <ul className="flex items-center gap-2">
             <li>
-              <Link to="/" className="hover:underline">Home</Link>
+              <Link to="/" className="hover:underline">Acceuil</Link>
             </li>
             <li>
-              <Link to="/about" className="hover:underline">About Us</Link>
-            </li>
-            <li>
-              <Link to="/services" className="hover:underline">Services</Link>
+              <Link to="/" className="hover:underline">Fonctionnalites</Link>
             </li>
             <li>
               <Link to="/contact" className="hover:underline">Contact</Link>
             </li>
           </ul>
-        </div>
+          {/* Column 3: Social Media */}
 
-        {/* Column 3: Social Media */}
-        <div>
-          <h2 className="text-lg font-semibold">Follow Us</h2>
-          <div className="mt-4 space-x-4">
+          <div className="flex items-center gap-2">
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400">
               {/* Add your preferred social media icons here */}
               <svg className="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -50,13 +35,12 @@ export default function Footer() {
             </a>
             {/* Add more social media icons as needed */}
           </div>
+          {/* Copyright Notice */}
+          <div className="flex items-center text-gray-500">
+            &copy; {new Date().getFullYear()} Sofia. All rights reserved.
+          </div>
         </div>
       </div>
-
-      {/* Copyright Notice */}
-      <div className="mt-8 text-center text-gray-500">
-        &copy; {new Date().getFullYear()} Sofia. All rights reserved.
-      </div>
-    </footer>
+    </footer >
   );
 };

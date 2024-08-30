@@ -14,10 +14,10 @@ export default function Home() {
         <p className="text-[#1f78d1] text-lg mb-5">Votre application de rappel d’entretien automobile au sommet !</p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
-        <img src="/lilkabaki001.jpg" alt="lilkabaki001" className="w-48 h-48 m-5 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110" />
-        <img src="/lilkabaki002.jpg" alt="lilkabaki002" className="w-48 h-48 m-5 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110" />
-        <img src="/lilkabaki003.jpg" alt="lilkabaki003" className="w-48 h-48 m-5 rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-110" />
+      <div className="flex flex-wrap justify-between mb-8">
+        <img src="/lilkabaki001.jpg" alt="lilkabaki001" className="w-80 h-72 m-5 object-cover transition-transform duration-300 ease-in-out hover:scale-110" />
+        <img src="/lilkabaki002.jpg" alt="lilkabaki002" className="w-80 h-72 m-5 transition-transform duration-300 ease-in-out hover:scale-110" />
+        <img src="/lilkabaki003.jpg" alt="lilkabaki003" className="w-80 h-72 m-5 transition-transform duration-300 ease-in-out hover:scale-110" />
       </div>
 
       <div className="flex flex-wrap justify-center gap-5 mb-8 bg-secondary rounded-lg">
@@ -208,7 +208,7 @@ S
         <ExpenseChart />
       </div>
 
-      <div className="faq-section">
+      <div className="bg-secondary rounded-lg p-4 my-12">
         <h2 className="text-4xl font-extrabold text-center mb-6">FAQ</h2>
         <FAQ />
       </div>

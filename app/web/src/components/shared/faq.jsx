@@ -17,11 +17,11 @@ export default function FAQ() {
     ];
 
     return (
-        <div className='jedconnect'>
+        <div className='flex items-center gap-2 text-center'>
             {faqs.map((faq, index) => (
-                <div key={index} className="faq-item">
-                    <h3>{faq.question}</h3>
-                    <p>{faq.answer}</p>
+                <div key={index} className="hover:bg-background hover:cursor-pointer h-[150px] rounded-lg flex items-center justify-center flex-col">
+                    <h3 className="text-xl font-bold">{faq.question}</h3>
+                    <p className="text-primary">{faq.answer}</p>
                 </div>
             ))}
         </div>

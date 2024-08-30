@@ -9,7 +9,7 @@ export default function Header() {
     navigate('/login');
   }
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-50">
       <nav className="bg-background p-4 sticky top-0">
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
