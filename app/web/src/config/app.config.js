@@ -1,5 +1,5 @@
 const appConfig = {
-    BACKEND_URL: import.meta.env.VITE_NEXT_BACKEND_API
+    BACKEND_URL: import.meta.env.VITE_VERCEL_BACKEND_API
 }
 
 export default appConfig;
