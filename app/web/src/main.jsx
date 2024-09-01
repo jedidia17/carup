@@ -8,10 +8,13 @@ import Contact from './screens/contact';
 import Functionality from './screens/functionality';
 import LoginForm from './screens/login';
 import RegisterForm from './screens/register';
-import 'react-toastify/dist/ReactToastify.css';
-import './globals.css';
 import ProctedLayout from './components/layouts/protectedLayout';
 import Dashboard from './screens/dashboard';
+import Profile from './screens/profile';
+import Manage from './screens/manage';
+import Schedule from './screens/schedule';
+import 'react-toastify/dist/ReactToastify.css';
+import './globals.css';
 
 
 const router = createBrowserRouter([
@@ -54,6 +57,18 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/',
         element: <Dashboard />
+      },
+      {
+        path:'/dashboard/profile',
+        element: <Profile />
+      },
+      {
+        path:'/dashboard/manage',
+        element: <Manage />
+      },
+      {
+        path:'/dashboard/schedule',
+        element: <Schedule />
       }
     ]
   },

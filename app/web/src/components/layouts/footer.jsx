@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
 
+
 export default function Footer() {
   return (
     <footer className="bg-background">
       <Separator />
       <div className="container py-10">
-        <div className='flex items-center justify-between'>
+        <div className='flex flex-col gap-4 md:flex-row md:gap-0 items-center justify-between'>
           {/* Column 2: Navigation Links */}
           <ul className="flex items-center gap-2">
             <li>

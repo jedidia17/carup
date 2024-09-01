@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Button, Input, Label } from '@/components/ui';
+import { Button } from '@/components/ui/button';
+import {Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
 export default function Manage() {
     const [carName, setCarName] = useState('');

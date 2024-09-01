@@ -6,56 +6,17 @@ export default function Contact() {
     return (
         <>
             <ContactBanner />
-
-            {/* <div className="contact-container">
-                <div className="contact-content">
-                    <h2>CONTACTEZ-NOUS</h2>
-                    <h1>Gardez votre véhicule en parfait état</h1>
-                    <p>Nous sommes là pour vous aider à prolonger la durée de vie de votre véhicule. Contactez-nous pour toute question ou assistance.</p>
-                    <button className="contact-button">ENVOYER UN MESSAGE <span role="img" aria-label="email">✉️</span></button>
-                </div>
-                <div className="contact-image-container">
-                    <div className="image-content">
-                        <img src="/Richel01.jpg" alt="Utilisateur souriant dans sa voiture" />
-                        <div className="image-credit"></div>
-                    </div>
-                    <div className="recommendation-card">
-                        <h4>NOTRE RECOMMANDATION</h4>
-                        <h3>Entretien Régulier</h3>
-                        <p>Sécurité, fiabilité</p>
-                        <div className="rating">5.0</div>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-            <div className="contact-container">
-                <div className="contact-text">
-                    <h1>Contactez CarUp</h1>
-                    <p>
-                        Notre équipe est prête à répondre à toutes vos questions et à vous aider à maintenir votre voiture en parfait état.
-                    </p>
-                </div>
-                <div className="image-content">
-                    <img src="/equipes.jpg" alt="equipes.jpg" />
-                    <div className="image-credit"></div>
-                </div>
-            </div> */}
-
-
             <div class="my-12">
-            <div class="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md font-[sans-serif]">
+            <div class="grid sm:grid-cols-2 items-start gap-14 p-8 mx-auto max-w-4xl bg-muted text-muted-foreground shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md">
                 <div>
-                    <h1 class="text-gray-800 text-3xl font-extrabold">Contactez CarUp</h1>
-                    <p class="text-sm text-gray-500 mt-4">Notre équipe est prête à répondre à toutes vos questions et à vous aider à maintenir votre voiture en parfait état.</p>
+                    <h1 class="text-3xl font-extrabold">Contactez CarUp</h1>
+                    <p class="text-sm mt-4">Notre équipe est prête à répondre à toutes vos questions et à vous aider à maintenir votre voiture en parfait état.</p>
 
                     <div class="mt-12">
-                        <h2 class="text-gray-800 text-base font-bold">Email</h2>
+                        <h2 class="text-foreground text-base font-bold">Email</h2>
                         <ul class="mt-4">
                             <li class="flex items-center">
-                                <div class="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                                <div class="bg-secondary h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#007bff'
                                         viewBox="0 0 479.058 479.058">
                                         <path
