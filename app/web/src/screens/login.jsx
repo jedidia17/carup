@@ -30,6 +30,8 @@ export default function LoginForm() {
       sessionStorage.clear();
       localStorage.setItem('token', responseData.token);
       sessionStorage.setItem('token', responseData.token);
+      localStorage.setItem('id', responseData.id);
+      sessionStorage.setItem('id', responseData.id);
       toast.error(responseData.error ? response.data.message : null);
       toast.success(response.data.message ? response.data.message : null);
       navigate('/dashboard');

@@ -1,14 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Logo from "./logo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { CarTaxiFront, LayoutDashboardIcon, Bell, User2Icon, HourglassIcon } from 'lucide-react';
+import { CarTaxiFront, LayoutDashboardIcon, Bell, User2Icon } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
 
 export default function ProctedLayout() {
     return (
-        <div className="flex">
-            <nav class="bg-background h-screen sticky top-0 left-0 min-w-[250px] py-6 overflow-auto border-r border-border">
+        <div className="flex relative">
+            <nav class="bg-background h-screen top-0 left-0 min-w-[250px] py-6 overflow-auto border-r border-border">
                 <div class="relative flex flex-col h-full">
                     <div className="ml-8">
                         <Logo />
@@ -30,7 +30,7 @@ export default function ProctedLayout() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="#"
+                            <NavLink to="/dashboard/notifications"
                                 className="text-foreground text-sm flex items-center hover:text-primary hover:border-r-[5px] border-primary hover:bg-secondary px-8 py-4 transition-all">
                                 <Bell fill="currentColor" className="w-[18px] h-[18px] mr-4" />
                                 <span>Notifications</span>
@@ -41,13 +41,6 @@ export default function ProctedLayout() {
                                 className="text-foreground text-sm flex items-center hover:text-primary hover:border-r-[5px] border-primary hover:bg-secondary px-8 py-4 transition-all">
                                 <User2Icon fill="currentColor" className="w-[18px] h-[18px] mr-4" />
                                 <span>Profile</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/dashboard/schedule"
-                                className="text-foreground text-sm flex items-center hover:text-primary hover:border-r-[5px] border-primary hover:bg-secondary px-8 py-4 transition-all">
-                                <HourglassIcon class="w-[18px] h-[18px] mr-4" fill="currentColor" />
-                                <span>HORAIRES</span>
                             </NavLink>
                         </li>
                     </ul>
@@ -64,7 +57,7 @@ export default function ProctedLayout() {
                     </div>
                 </div>
             </nav>
-            <div className="flex-1 bg-background">
+            <div className="flex-1 left-[250px] bg-background">
                 <Outlet />
             </div>
         </div>

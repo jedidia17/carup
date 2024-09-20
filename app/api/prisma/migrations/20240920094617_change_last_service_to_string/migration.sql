@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Car" ALTER COLUMN "lastService" SET DATA TYPE TEXT;

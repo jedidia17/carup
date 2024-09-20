@@ -13,6 +13,7 @@ import Dashboard from './screens/dashboard';
 import Profile from './screens/profile';
 import Manage from './screens/manage';
 import Schedule from './screens/schedule';
+import Notifications from './screens/schedule';
 import 'react-toastify/dist/ReactToastify.css';
 import './globals.css';
 
@@ -59,16 +60,16 @@ const router = createBrowserRouter([
         element: <Dashboard />
       },
       {
-        path:'/dashboard/profile',
+        path: '/dashboard/profile',
         element: <Profile />
       },
       {
-        path:'/dashboard/manage',
+        path: '/dashboard/manage',
         element: <Manage />
       },
       {
-        path:'/dashboard/schedule',
-        element: <Schedule />
+        path: '/dashboard/notifications',
+        element: <Notifications />
       }
     ]
   },

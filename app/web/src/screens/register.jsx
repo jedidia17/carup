@@ -33,6 +33,8 @@ export default function RegisterForm() {
       sessionStorage.clear();
       localStorage.setItem('token', responseData.token);
       sessionStorage.setItem('token', responseData.token);
+      localStorage.setItem('id', responseData.id);
+      sessionStorage.setItem('id', responseData.id);
       toast.error(responseData.error ? response.data.message : null);
       toast.success(responseData.message ? responseData.message : null);
       navigate("/dashboard");

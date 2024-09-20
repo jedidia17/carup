@@ -6,7 +6,7 @@ export default function Logo() {
                 alt="car up logo"
                 className="w-10 h-10"
             />
-            <p className="font-bold text-2xl">CARUP</p>
+            <p className="font-bold text-4xl">CarUp</p>
         </div>
     )
 }

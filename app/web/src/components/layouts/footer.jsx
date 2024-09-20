@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
           {/* Copyright Notice */}
           <div className="flex items-center text-gray-500">
-            &copy; {new Date().getFullYear()} Sofia. All rights reserved.
+            &copy; {new Date().getFullYear()} Jedidia. All rights reserved.
           </div>
         </div>
       </div>

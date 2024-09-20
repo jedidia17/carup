@@ -1,52 +1,40 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Button } from '@/components/ui/button';
-import {Input } from '@/components/ui/input';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-
+import { useEffect } from 'react';
+import axiosInstance from '@/config/axios.config';
+import CardCar from '@/components/shared/card-car';
 export default function Manage() {
-    const [carName, setCarName] = useState('');
-    const [cars, setCars] = useState([]);
+    const [carList, setCarList] = useState([]);
 
-    const addCar = async () => {
+    useEffect(() => {
         try {
-            await axios.post('http://localhost:8000/api/v1/cars/', { name: carName });
-            setCars([...cars, { name: carName }]);
-            setCarName('');
-        } catch (error) {
-            console.error('Error adding car:', error);
-        }
-    };
+            async function fetctData() {
+                const response = await axiosInstance.get(`/api/v1/cars/`);
+                console.log(response.data);
+                setCarList(response.data);
+            }
+            fetctData();
+        } catch {
 
-    const removeCar = async (carId) => {
-        try {
-            await axios.delete(`http://localhost:8000/api/v1/cars/${carId}`);
-            setCars(cars.filter(car => car.id !== carId));
-        } catch (error) {
-            console.error('Error removing car:', error);
+        } finally {
+
         }
-    };
+    }, []);
+
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h2 className="text-2xl">Manage Cars</h2>
-            <div className="mb-4">
-                <Label htmlFor="carName">Car Name</Label>
-                <Input
-                    id="carName"
-                    type="text"
-                    value={carName}
-                    onChange={(e) => setCarName(e.target.value)}
-                />
-                <Button onClick={addCar}>Add Car</Button>
+        <div className='flex flex-col h-screen p-4'>
+            <p>List of cars</p>
+            <div className='my-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12'>
+                {
+                    carList?.filter(car => car.userId === localStorage.getItem('id'))?.map(car => (
+                        <CardCar model={car.model} year={car.year} lastService={car.lastService} />
+                    ))
+                }
+                <CardCar />
             </div>
-            <ul>
-                {cars.map(car => (
-                    <li key={car.id}>
-                        {car.name}
-                        <Button onClick={() => removeCar(car.id)}>Remove</Button>
-                    </li>
-                ))}
-            </ul>
         </div>
     );
 }
